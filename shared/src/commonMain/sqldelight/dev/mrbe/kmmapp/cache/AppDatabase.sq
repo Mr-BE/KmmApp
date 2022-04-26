@@ -1,0 +1,15 @@
+CREATE TABLE Posts (
+userId INTEGER AS Int NOT NULL DEFAULT 1,
+id INTEGER AS Int PRIMARY KEY,
+title TEXT NOT NULL,
+body TEXT NOT NULL );
+
+insertPost: INSERT INTO Posts(userId, id, title, body) VALUES(?, ?, ?,?);
+
+
+deleteAllPosts: DELETE FROM Posts;
+deletePostById: DELETE FROM Posts WHERE id =?;
+
+
+selectAllPosts: SELECT * FROM Posts;
+selectPostById: SELECT * FROM Posts WHERE id =?;
